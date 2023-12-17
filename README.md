@@ -8,4 +8,4 @@ ehy.training@gmail.com
 
 ---
 
-Version: 1.1
+Version: 1.2

@@ -1,0 +1,76 @@
+/*---------------------
+Responsive grid showcase for teaching.
+Author: Enno Hyttrek, ehy.training@gmail.com
+Version: 1.2
+---------------------*/
+
+
+/*---------------------
+RESET
+---------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/*---------------------
+LAYOUT
+---------------------*/
+
+body {
+    position: relative;
+}
+
+.wrapper
+{
+    position: absolute;
+    width: 100%;
+}
+
+
+div.grid > div {
+    display: flex;
+}
+
+div.grid > div > div{
+    width: 25%;
+    padding: 0 8px;
+}
+
+div.grid > div > div > div {
+    height: 100vh;
+}
+
+
+
+
+/*---------------------
+TYPOGRAPHY
+---------------------*/
+
+body {
+    font-family: 'Inter';
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,p,ul,figure {
+    margin-bottom: 1em;
+}
+
+
+
+/*---------------------
+COLOUR
+---------------------*/
+
+div.grid > div> div > div {
+    background: hsla(0,100%,50%,0.1);
+}

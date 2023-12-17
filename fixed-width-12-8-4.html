@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fixed width 12-8-4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <style>
+        header {
+            background-image: url(img/architecture-1857175_1920.jpg);
+            background-position: center;
+            background-size: cover;
+            min-height: 50vh;
+        }
+
+        div.container {
+            position: relative;
+            max-width: 1184px;
+            margin: 0 auto;
+                        padding: 1em 24px;
+        }
+
+        div.grid div.container {
+            padding: 0 16px;
+        }
+
+        div.grid>div>div:nth-child(5),
+        div.grid>div>div:nth-child(6),
+        div.grid>div>div:nth-child(7),
+        div.grid>div>div:nth-child(8),
+        div.grid>div>div:nth-child(9),
+        div.grid>div>div:nth-child(10),
+        div.grid>div>div:nth-child(11),
+        div.grid>div>div:nth-child(12) {
+            display: none;
+        }
+
+        @media only screen and (width: 416px) {
+
+            body {
+                background: hsl(100, 55%, 76%);
+            }
+        }
+
+        @media only screen and (min-width: 580px) {
+
+            div.grid>div>div:nth-child(5),
+            div.grid>div>div:nth-child(6),
+            div.grid>div>div:nth-child(7),
+            div.grid>div>div:nth-child(8) {
+                display: block;
+            }
+
+            div.columns {
+                column-count: 2;
+                grid-gap: 16px;
+            }
+
+            header {
+                min-height: 30vw;
+            }
+
+        }
+
+        @media only screen and (width: 800px) {
+
+            body {
+                background: hsl(100, 55%, 76%);
+            }
+        }
+
+        @media only screen and (min-width: 960px) {
+
+            div.grid>div>div:nth-child(9),
+            div.grid>div>div:nth-child(10),
+            div.grid>div>div:nth-child(11),
+            div.grid>div>div:nth-child(12) {
+                display: block;
+            }
+
+            div.columns {
+                column-count: 3;
+            }
+
+            header {
+                min-height: 15vw;
+            }
+        }
+
+        @media only screen and (width: 1184px) {
+
+            body {
+                background: hsl(100, 55%, 76%);
+            }
+        }
+
+        @media only screen and (min-width: 1184px) {
+            /*
+            div.container {
+                margin-left: calc((100vw - 1184px) / 2);
+            }
+*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="container">
+                <h1>Fixed Width Grid 1184, 12-8-4</h1>
+            </div>
+        </header>
+
+        <section class="content">
+            <div class="container columns">
+                <p>
+                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
+                </p>
+                <p>
+                    Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
+                </p>
+                <p>
+                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum.
+                </p>
+            </div>
+
+        </section>
+    </div>
+
+
+    <div class="grid">
+        <div class="container">
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+
+</body></html>
