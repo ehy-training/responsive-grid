@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>Fixed width 12-8-4</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://rsms.me/">
@@ -19,7 +20,7 @@
             position: relative;
             max-width: 1184px;
             margin: 0 auto;
-                        padding: 1em 24px;
+            padding: 1em 24px;
         }
 
         div.grid div.container {
@@ -97,16 +98,18 @@
         }
 
         @media only screen and (min-width: 1184px) {
-            /*
-            div.container {
-                margin-left: calc((100vw - 1184px) / 2);
-            }
-*/
+
         }
     </style>
 </head>
 
 <body>
+
+    <div class="control">
+        <button id="button-show" onclick="document.getElementById('grid').style.display = 'block'">Show Grid</button>
+        <button id="button-hide" onclick="document.getElementById('grid').style.display = 'none'">Hide Grid</button>
+    </div>
+
     <div class="wrapper">
 
         <header>
@@ -115,24 +118,52 @@
             </div>
         </header>
 
-        <section class="content">
-            <div class="container columns">
+        <main>
+            <section class="content">
+                <div class="container columns">
+                   <h2>Das Prinzip</h2>
+                    <p>
+                        Dieses Rasterprinzip basiert auf der Idee, für Viewportgrößen im Notebook- und Desktopbereich den Inhalt in der Breite zu fixieren. Das ist eine gängige Praxis, bei der lediglich die Werte für die Breite des fixen Inhaltsbereichs variieren. In der hier vorliegenden Variante ist dieser Wert auf 1184 Pixel gesetzt, da sich so bei 12 Spalten und 16px Spaltenabstand, sowie einem seitlichen Rand von 24 Pixeln eine Spaltenbreite von 80 Pixeln ergibt.
+                    </p>
+                    <p>
+                        Mit diesen Werten kann man gut und sauber arbeiten, insbesondere, wenn es darum geht in UI/UX Layoutprogrammen wie beispielsweise Figma ein pixelgenaues Layout zu erstellen, das auch in der Realität der dynamischen Darstellung im Browser funktioniert.
+                    </p>
+                    <p>
+                        Die verwendeten Breakpoints und jeweilige Spaltenanzahl:
+                        </p>
+                            
+                        <ul> 
+                        <li>unter 580px: 4 Spalten</li>
+                        <li>von 580 bis 959px: 8 Spalten</li> 
+                        <li>ab 960px: 2 Spalten</li> 
+                    </ul>
+                    <p>
+                    Die optimalen Viewportbreiten für den statischen Entwurf in Prototypingprogrammen sind: 
+                    </p>
+                    <ul>
+                        <li>416px für Mobil-Hochformat</li>
+                        <li>800px für Tablet-Hochformat</li>
+                        <li>1184px für Notebook/Desktop</li>
+                    </ul>
+                    <p>
+                        Diese Werte sind keinesfalls allgemeingültig oder Teil einer gängigen <em>best practice</em>, sondern ein Vorschlag meinerseits für sinnvoll gewählte Zahlen.
+                    </p>
+
+                </div>
+
+            </section>
+        </main>
+        <footer>
+            <div class="container">
                 <p>
-                    Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.
-                </p>
-                <p>
-                    Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten - man nennt diese Sätze »Pangrams«. Sehr bekannt ist dieser: The quick brown fox jumps over the lazy old dog.
-                </p>
-                <p>
-                    Oft werden in Typoblindtexte auch fremdsprachige Satzteile eingebaut (AVAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum.
+                    © 2023 Enno Hyttrek
                 </p>
             </div>
-
-        </section>
+        </footer>
     </div>
 
 
-    <div class="grid">
+    <div id="grid" class="grid">
         <div class="container">
             <div>
                 <div></div>
